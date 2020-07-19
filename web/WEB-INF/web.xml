@@ -3,7 +3,6 @@
     <welcome-file-list>
         <welcome-file>home.html</welcome-file>
     </welcome-file-list>
-    
     <servlet>
         <servlet-name>myservlet</servlet-name>
         <servlet-class>com.practice.MyServlet</servlet-class>
@@ -20,6 +19,14 @@
         <servlet-name>unsuccess</servlet-name>
         <servlet-class>com.practice.UnsuccesServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>S1</servlet-name>
+        <servlet-class>com.attr.S1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>S2</servlet-name>
+        <servlet-class>com.attr.S2</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>register</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
@@ -35,6 +42,14 @@
     <servlet-mapping>
         <servlet-name>unsuccess</servlet-name>
         <url-pattern>/unsuccess</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>S1</servlet-name>
+        <url-pattern>/s1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>S2</servlet-name>
+        <url-pattern>/s2</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
