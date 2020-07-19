@@ -25,7 +25,11 @@ public class RegisterServlet extends HttpServlet{
                 out.println("<h2> Password : " + password +" </h2>");
                 out.println("<h2> Email : " + email +" </h2>");
                 out.println("<h2> Gender : " + gender +" </h2>");
-                out.println("<h2> Course : " + course +" </h2>");    
+                out.println("<h2> Course : " + course +" </h2>"); 
+                //forwarding request to SuccesServlet
+                // Creating Request Dispatcher object
+                RequestDispatcher rd = request.getRequestDispatcher("success");
+                rd.forward(request,response);
             }
             else
             {
@@ -35,8 +39,15 @@ public class RegisterServlet extends HttpServlet{
         }
         else
         {
-            System.out.println("You have not accepted T&c ");
-            out.println("<h1>You have not accepted T&c</h2>");
+            /*System.out.println("You have not accepted T&c ");
+            out.println("<h1>You have not accepted T&C </h2>");*/
+            //I going to include output of index.html
+            //get the output of requestdispatcher
+            
+            RequestDispatcher rd = request.getRequestDispatcher("unsuccess");
+            //include method if RequestDispatcher
+            rd.include(request,response);
+            
         }
         
         
